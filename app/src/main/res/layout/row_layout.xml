@@ -2,7 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:background="@color/lightblackcolor"
+    android:layout_height="wrap_content">
 
 
     <LinearLayout
@@ -32,7 +33,7 @@
                 android:id="@+id/title"
 
                 android:textSize="16sp"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:padding="5dp"
                 android:layout_height="wrap_content">
             </TextView>
@@ -42,6 +43,7 @@
                 android:id="@+id/heightT"
                 android:textSize="14sp"
                 android:padding="5dp"
+                android:textColor="#dddd"
                 android:layout_height="wrap_content">
             </TextView>
             <TextView
@@ -49,6 +51,7 @@
                 android:id="@+id/widthT"
                 android:textSize="14sp"
                 android:padding="5dp"
+             android:textColor="#dddd"
                 android:layout_height="wrap_content">
             </TextView>
         </LinearLayout>

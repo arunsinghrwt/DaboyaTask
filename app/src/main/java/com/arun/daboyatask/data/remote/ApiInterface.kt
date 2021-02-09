@@ -1,9 +1,8 @@
-package com.arun.daboyatask.Network
+package com.arun.daboyatask.data.remote
 
 import com.arun.daboyatask.Model.ResponseModel
 import io.reactivex.rxjava3.core.Flowable
 import retrofit2.http.GET
-import retrofit2.http.Header
 import retrofit2.http.Headers
 import retrofit2.http.Query
 

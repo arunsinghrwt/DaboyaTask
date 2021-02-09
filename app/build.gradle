@@ -17,6 +17,7 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
 
     buildTypes {
@@ -85,8 +86,9 @@ dependencies {
     implementation 'com.otaliastudios:cameraview:2.6.2'
 
 
-    //multidex
     implementation 'androidx.multidex:multidex:2.0.1'
 
-
+    //Paging
+    def paging_version = "2.1.2"
+    implementation "androidx.paging:paging-runtime-ktx:$paging_version"
 }

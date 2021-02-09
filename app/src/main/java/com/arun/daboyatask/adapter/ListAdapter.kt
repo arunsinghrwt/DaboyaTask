@@ -1,4 +1,4 @@
-package com.arun.daboyatask.Adapter
+package com.arun.daboyatask.adapter
 
 import android.content.Context
 import android.util.Log
@@ -19,10 +19,11 @@ import kotlinx.android.synthetic.main.row_layout.view.*
  **/
 
 class ListAdapter (var context : Context) : androidx.recyclerview.widget.RecyclerView.Adapter<ListAdapter.ViewHolder>() {
-
-   var list  =  ArrayList<ResponseModel>()
-
-
+    var list  =  ArrayList<ResponseModel>()
+    fun addList (newlist : ArrayList<ResponseModel>){
+        this.list.addAll(newlist)
+        notifyDataSetChanged()
+    }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(LayoutInflater.from(context).inflate(R.layout.row_layout, parent, false))
     }
@@ -34,20 +35,11 @@ class ListAdapter (var context : Context) : androidx.recyclerview.widget.Recycle
         holder.itemView.widthT.text = t.width.toString()
         try {
             Glide.with(context)
-                .load(t.url)
+                .load(t.download_url)
                 .into(holder.itemView.img)
         }catch (Ex: Exception){
             Log.e("Exception", "---->>>>$Ex")
         }
-
-
-
-
-
-
-
-
-
 
 
     }
